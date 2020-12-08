@@ -10,6 +10,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.cabinetapp.background.backgroundAjouterRdv;
+import com.example.cabinetapp.background.backgroundHistorique;
+
+import static com.example.cabinetapp.LoginActivity.user;
+
 public class MenuPatientActivity extends AppCompatActivity {
 
     TextView tvspec, tvnom, tvdoc;
@@ -28,6 +33,8 @@ public class MenuPatientActivity extends AppCompatActivity {
         btnHis=findViewById(R.id.btnHis);
         btnContact=findViewById(R.id.btnContact);
         ivdoc=findViewById(R.id.ivdoc);
+
+        //tvnom.setText(LoginActivity.user);
     }
 
     public void deconnexion(View v){
@@ -43,5 +50,11 @@ public class MenuPatientActivity extends AppCompatActivity {
     public void prendreRdv(View v) {
         Intent MainActivity = new Intent(MenuPatientActivity.this, PrendreRdvActivity.class);
         startActivity(MainActivity);
+    }
+
+    public void btnhistorique(View view) {
+        String user= LoginActivity.user;
+        backgroundHistorique bg = new backgroundHistorique(this);
+        bg.execute(user);
     }
 }

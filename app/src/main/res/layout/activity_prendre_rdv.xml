@@ -36,7 +36,7 @@
             android:paddingLeft="20dp"
             android:paddingTop="60dp"
             android:text="Date du rendez-vous :"
-            android:textColor="#673AB7"
+            android:textColor="#8BC34A"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -61,7 +61,7 @@
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
             android:text="Heure du rendez-vous :"
-            android:textColor="#673AB7"
+            android:textColor="#8BC34A"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -79,20 +79,61 @@
             android:paddingTop="10dp"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/button"
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="Nature de consultation :"
+            android:textColor="#8BC34A"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/natrdv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginRight="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/phonendoscope"
+            android:ems="10"
+            android:inputType="datetime|text|time"
+            android:paddingLeft="20dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="Confirmer"
-            android:textSize="20sp"
-            app:backgroundTint="#03A9F4" />
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="35dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="-115dp">
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginLeft="60dp"
+                android:padding="15dp"
+                android:text="Retour"
+                android:textSize="20sp"
+                android:onClick="back"
+                app:backgroundTint="#DFFF5722" />
+            <Button
+                android:id="@+id/btnRdv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:padding="15dp"
+                android:onClick="AjouterRDVBtn"
+                android:text="Confirmer"
+                android:textSize="20sp"
+                app:backgroundTint="#DFFF5722" />
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.cabinetapp.background.backgroundMedecin;
+import com.example.cabinetapp.background.backgroundListRDV;
+import com.example.cabinetapp.background.backgroundListeNoteMedecin;
+import com.example.cabinetapp.background.backgroundListeNoteSec;
+import com.example.cabinetapp.background.backgroundListePatient;
 
 public class MenuSecActivity extends AppCompatActivity {
 
@@ -38,11 +41,21 @@ public class MenuSecActivity extends AppCompatActivity {
 
     public void BtnPatient(View view) {
 
-        backgroundMedecin bg = new backgroundMedecin(this);
+        backgroundListePatient bg = new backgroundListePatient(this);
+        bg.execute();
+    }
+    public void BtnRDV(View view) {
+
+        backgroundListRDV bg = new backgroundListRDV(this);
         bg.execute();
     }
     public void deconnexion(View v){
         Intent MainActivity = new Intent(MenuSecActivity.this, LoginActivity.class);
         startActivity(MainActivity);
+    }
+
+    public void btnNote(View view) {
+        backgroundListeNoteSec bg = new backgroundListeNoteSec(this);
+        bg.execute();
     }
 }

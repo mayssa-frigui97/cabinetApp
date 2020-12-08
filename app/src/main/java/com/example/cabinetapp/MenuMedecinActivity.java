@@ -1,7 +1,5 @@
 package com.example.cabinetapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +7,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.cabinetapp.background.backgroundMedecin;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.cabinetapp.background.backgroundListRDVMedecin;
+import com.example.cabinetapp.background.backgroundListeNoteMedecin;
+import com.example.cabinetapp.background.backgroundListePatient;
 
 public class MenuMedecinActivity extends AppCompatActivity {
 
@@ -34,9 +36,22 @@ public class MenuMedecinActivity extends AppCompatActivity {
         Intent MainActivity = new Intent(MenuMedecinActivity.this, LoginActivity.class);
         startActivity(MainActivity);
     }
+
     public void BtnPatient(View view) {
 
-        backgroundMedecin bg = new backgroundMedecin(this);
+        backgroundListePatient bg = new backgroundListePatient(this);
+        bg.execute();
+    }
+
+    public void BtnRDV(View view) {
+
+        backgroundListRDVMedecin bg = new backgroundListRDVMedecin(this);
+        bg.execute();
+    }
+
+    public void BtnNote(View view) {
+
+        backgroundListeNoteMedecin bg = new backgroundListeNoteMedecin(this);
         bg.execute();
     }
 }

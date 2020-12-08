@@ -29,21 +29,51 @@
         android:textStyle="bold"
         app:drawableTintMode="multiply" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-115dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:longClickable="true"
+            android:onClick="back"
+            android:paddingRight="0dp"
+            app:srcCompat="@drawable/backorange" />
+
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="50dp"
+            android:paddingLeft="0dp"
             android:paddingTop="30dp"
-            android:text="Liste des rendez-vous"
+            android:text="Liste des rendez-vous    "
             android:textColor="#673AB7"
-            android:textSize="30sp"
+            android:textSize="30dp"
             android:textStyle="bold" />
-
+    </LinearLayout>
         <ListView
             android:id="@+id/listRdv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="103dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginLeft="280dp"
+            android:drawableTop="@drawable/plus5"
+            android:onClick="addRDV"
+            android:text="Ajouter  Rendez-vous"
+            android:textSize="14sp"
+            app:backgroundTint="#673AB7" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,15 +3,43 @@ package com.example.cabinetapp.Entite;
 import java.util.Date;
 public class Patient {
     int id;
-    String nom, prenom ,tel,cnam ,dateNaiss;
+    String nom, prenom ,tel,cnam ,dateNaiss, username;
 
-    public Patient(int id, String nom, String prenom, String dateNaiss, String tel, String cnam) {
+    public Patient(int id) {
+        this.id = id;
+    }
+
+    public Patient(int id, String nom, String prenom, String tel, String cnam, String dateNaiss, String username) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.tel = tel;
         this.cnam = cnam;
         this.dateNaiss = dateNaiss;
+        this.username = username;
+    }
+
+    public Patient(int id, String nom, String prenom, String tel, String cnam, String dateNaiss) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.tel = tel;
+        this.cnam = cnam;
+        this.dateNaiss = dateNaiss;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Patient(int id, String nom, String prenom) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
     }
 
     public int getId() {

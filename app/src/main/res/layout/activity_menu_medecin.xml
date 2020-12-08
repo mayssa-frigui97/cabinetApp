@@ -96,7 +96,8 @@ tools:layout_editor_absoluteY="-115dp">
         app:icon="@drawable/calendar"
         app:iconGravity="textStart"
         app:iconPadding="3dp"
-        app:iconSize="35dp" />
+        app:iconSize="35dp"
+        android:onClick="BtnRDV"/>
 
 </LinearLayout>
 
@@ -117,6 +118,7 @@ tools:layout_editor_absoluteY="-115dp">
         android:text="Notes"
         android:textIsSelectable="false"
         android:textSize="15sp"
+        android:onClick="BtnNote"
         app:backgroundTint="#DFFF5722"
         app:icon="@drawable/notebook"
         app:iconGravity="textStart"

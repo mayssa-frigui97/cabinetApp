@@ -27,19 +27,29 @@
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="290dp"
+            android:drawableLeft="@drawable/man24"
+            android:drawablePadding="5dp"
             android:hint="Entrez votre nom utilisateur"
-            android:inputType="textShortMessage" />
+            android:inputType="textShortMessage"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Entrez votre mot de passe"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="80px"
-            android:inputType="textPassword" />
+            android:drawableLeft="@drawable/key"
+            android:drawablePadding="5dp"
+            android:hint="Entrez votre mot de passe  "
+            android:inputType="textPassword"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/msgerreur"
@@ -50,16 +60,20 @@
 
         <Button
             android:id="@+id/login"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="20px"
             android:background="#009688"
+            android:onClick="loginBtn"
+            android:padding="15dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
             android:text="Connexion"
             android:textColor="#fff"
             android:textSize="18sp"
-            android:layout_marginTop="100px"
-            app:backgroundTint="#009688"
-            android:onClick="loginBtn"
-            />
+            app:backgroundTint="#009688" />
 
     </LinearLayout>
 

@@ -15,18 +15,10 @@ public class LoginActivity extends AppCompatActivity {
     private EditText username,password;
     private Button login;
     private TextView msgerreur;
+    public static String user;
 
-    String name="";
-    String pswd="";
 
-    class Credentials
-    {
-        String name = "mayssa";
-        String pswd = "1234";
-    }
 
-    boolean isValid = false;
-    private int counter = 5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
     public void loginBtn(View view) {
-        String user = username.getText().toString();
+         user = username.getText().toString();
         String pass = password.getText().toString();
 
         background bg = new background(this);

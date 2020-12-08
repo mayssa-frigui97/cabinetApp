@@ -8,11 +8,11 @@
     >
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/randevu1"
-        android:id="@+id/image"
-        />
+        android:id="@+id/rdvImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/date" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,25 +30,28 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/CorrdPat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableLeft="@drawable/man"
+            android:drawablePadding="8dp"
             android:text="nom prenom patient"
             android:textColor="#a9a9a9"
-            android:textStyle="bold"
-            android:layout_margin="5dp"
             android:textSize="15sp"
-            android:id="@+id/CorrdPat"
-            />
+            android:textStyle="bold" />
+
         <TextView
+            android:id="@+id/ConsNat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableLeft="@drawable/phonendoscope"
+            android:drawablePadding="8dp"
             android:text="nature consultation"
             android:textColor="#a9a9a9"
-            android:textStyle="bold"
-            android:layout_margin="5dp"
             android:textSize="15sp"
-            android:id="@+id/ConsNat"
-            />
+            android:textStyle="bold" />
         <!--so our layout is set-->
 
     </LinearLayout>

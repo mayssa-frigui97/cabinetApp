@@ -90,6 +90,7 @@
                 android:isScrollContainer="false"
                 android:text="Historique"
                 android:textSize="14dp"
+                android:onClick="btnhistorique"
                 app:backgroundTint="#673AB7"
                 app:icon="@drawable/historique1"
                 app:iconGravity="textStart"

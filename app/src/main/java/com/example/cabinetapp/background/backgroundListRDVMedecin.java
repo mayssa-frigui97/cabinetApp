@@ -5,8 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 
-import com.example.cabinetapp.Entite.Patient;
-import com.example.cabinetapp.ListePatientActivity;
+import com.example.cabinetapp.Entite.RendezVous;
+import com.example.cabinetapp.ListeRdvMedecinActivity;
+import com.example.cabinetapp.ListeRdvSecActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,19 +19,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-/**
- * Created by faiizii on 11-Feb-18.
- */
-
-public class backgroundMedecin extends AsyncTask <String, Void,String> {
-
+public class backgroundListRDVMedecin extends AsyncTask<String, Void,String> {
     AlertDialog dialog;
     String result = "";
     Intent intent;
-    ArrayList<Patient>tab=new ArrayList<Patient>();
+    ArrayList<RendezVous> tab=new ArrayList<RendezVous>();
     Context context;
     public Boolean login = false;
-    public backgroundMedecin(Context context)
+    public backgroundListRDVMedecin(Context context)
     {
         this.context = context;
     }
@@ -38,14 +34,13 @@ public class backgroundMedecin extends AsyncTask <String, Void,String> {
     @Override
     protected void onPreExecute() {
         dialog = new AlertDialog.Builder(context).create();
-       //intent= new Intent(context, ListePatientActivity.class);
 
     }
     @Override
     protected void onPostExecute(String s) {
         dialog.setMessage(s);
-      //  dialog.show();
-        intent= new Intent(context, ListePatientActivity.class);
+        //  dialog.show();
+        intent= new Intent(context, ListeRdvMedecinActivity.class);
         intent.putExtra("key", result);
         context.startActivity(intent);
 
@@ -56,7 +51,7 @@ public class backgroundMedecin extends AsyncTask <String, Void,String> {
 
 
 
-        String connstr = "http://169.254.96.165:80/ServiceAppAndroid/ListePatient.php";
+        String connstr = "http://169.254.96.165:80/ServiceAppAndroid/ListeRendezVous.php";
 
         try {
             URL url = new URL(connstr);
@@ -73,10 +68,8 @@ public class backgroundMedecin extends AsyncTask <String, Void,String> {
 
             while ((line = reader.readLine()) != null)
             {
-               result+= line;
-                /*String[] res = line.split(",");
-                result+="/"."".Integer.parseInt(res[0]),res[1],res[2],res[3],res[4],"ggg";
-                result =tab;*/
+                result+= line;
+
 
             }
             reader.close();

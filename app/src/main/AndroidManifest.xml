@@ -12,7 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CabinetAPP"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PrendreRdvActivity"></activity>
+        <activity android:name=".AjouterNoteSecActivity"></activity>
+        <activity android:name=".ListeNoteSecActivity" />
+        <activity android:name=".AjouterNoteActivity" />
+        <activity android:name=".ListeNoteMedecinActivity" />
+        <activity android:name=".HistoriqueActivity" />
+        <activity android:name=".ModifierConsultationActivity" />
+        <activity android:name=".AddRdvActivity" />
+        <activity android:name=".AddPatientActivity" />
+        <activity android:name=".PrendreRdvActivity" />
         <activity android:name=".ListeRdvSecActivity" />
         <activity android:name=".ListeRdvMedecinActivity" />
         <activity
